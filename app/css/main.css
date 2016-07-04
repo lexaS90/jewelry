@@ -64,8 +64,32 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: ''; }
+
+.clearfix:after {
+  clear: both; }
+
+img {
+  max-width: 100%; }
+
 /*
  * 	Example
  *	@include font-face("OpenSans", "fonts/OpenSans/OpenSansRegular/OpenSansRegular", $file-formats: eot woff2 woff);
  */
-/**/
+body {
+  background-color: #fff; }
+
+.main-header {
+  background: #fff;
+  width: 100%; }
+  .main-header .main-header-left {
+    float: left;
+    width: 50%;
+    background-color: #000; }
+    .main-header .main-header-left .img-jewelry-wrapper {
+      width: 80%; }
+  .main-header .main-header-right {
+    float: left;
+    width: 50%; }

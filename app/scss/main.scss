@@ -3,4 +3,23 @@
 @import "default.scss";
 @import "fonts.scss";
 
-/**/
+body{
+	background-color: #fff;
+}
+
+.main-header{
+	background: #fff;
+	width: 100%;
+	.main-header-left{
+		float:left;
+		width: 50%;
+		background-color: #000;
+		.img-jewelry-wrapper{
+			width: 80%;
+		}
+	}
+	.main-header-right {
+		float:left;
+		width: 50%;
+	}
+}

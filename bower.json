@@ -16,8 +16,8 @@
   ],
   "dependencies": {
     "font-awesome": "fontawesome#^4.6.3",
-    "bootstrap-sass": "^3.3.6",
-    "jquery": "2.2.4"
+    "jquery": "2.2.4",
+    "normalize-css": "^4.2.0"
   },
   "overrides": {
     "font-awesome": {
