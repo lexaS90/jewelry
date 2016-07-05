@@ -116,6 +116,7 @@ textarea{
     margin-bottom: 28px;
     border: 0;
     color: $text-color;
+    box-sizing: border-box;
     @include placeholder {
         color: shade($text-color, 10%);;
     }

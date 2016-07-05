@@ -8,7 +8,19 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
-	/**/
+	.main-header{
+		.main-header-left,
+		.main-header-right{
+			float: none;
+			width: 100%;
+		}
+		.main-header-left{
+			background: #000;
+		}
+		.img-jewelry{
+			margin-top: 0;
+		}
+	}
 }
 
 

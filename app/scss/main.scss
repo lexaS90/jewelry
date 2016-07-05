@@ -4,86 +4,104 @@
 @import "fonts.scss";
 
 /* =========== Header =========== */
-
 .main-header{
-	background: #fff;
+	background: url("../img/woman.png") #fff no-repeat 100% 0;
 	width: 100%;
-	position: relative;
+	position: relative;	
 	.main-header-left{
 		float:left;
 		width: 50%;
-		background:url("../img/aside.png") #000 no-repeat 100% 0;
-		.img-jewelry-wrapper{
-			margin-right: 200px;
-			margin-bottom: 50px;
-			// background-color: green;
-		}
-		.img-jewelry{
-			width: 40%;
-			margin:100px auto 0;
-			position: relative;
-			img{
-				margin-top: -24px;
-				margin-left: 6px;
-				position: relative;
-				z-index: 2;
-			}		
-			&:before{
-				display: block;
-				content: '';
-				position: absolute;
-				background:url("../img/chain.png") no-repeat 50% 100%;
-				background-size: 100% 100%;
-				width: 100%;
-				height: 142px;
-				bottom: 100%;
-				z-index: 1;
-			}
-		}		
-		.form-jewelry-wrapper{
-			margin-right: 210px;
-		}
-		.form-jewelry{
-			background-color: $blue;
-			width: 80%;
-			margin:0 auto 20px;
-			padding:10px 20px;
-			position: relative;
-			border:3px solid rgba(255,255,255,0.6);
-			box-shadow: 0 0 0 6px $blue;
-			.form-jewelry-caption-wrap{
-				text-align: center;
-				margin-bottom: 16px;				
-			}
-			.form-jewelry-caption{
-				color: #fff;
-				font-weight: bold;
-				font-size: em(18px);
-				letter-spacing: em(1px);
-			}
-			input[type="text"]{
-				padding: 10px 10px 10px 18px;
-			}
-			.btn{
-				padding: 10px 0;
-			}
-		}
-	}	
-
+		background:url("../img/aside.png") #000 no-repeat 100% 0;	
+	}
 	.main-header-right {
 		float:left;
 		width: 50%;
-		// background-color: green;
-		margin-top: 10%;
-	}
-	.main-header-right-wrap{
-		width: 90%;
-		margin:0 auto;
-		text-align: center;		
-	}
-	.tagline{
-		font-family: lobsterRegular, $verdana;
-		font-size: em(24px);
-		color: #6b6b6b;	
+		margin-top: 8%;
 	}
 }
+
+.img-jewelry-wrapper{
+	margin-right: 200px;
+	margin-bottom: 50px;
+}
+
+.img-jewelry{
+	width: 40%;
+	margin:100px auto 0;
+	position: relative;
+	img{
+		margin-top: -24px;
+		margin-left: 6px;
+		position: relative;
+		z-index: 2;
+	}		
+	&:before{
+		display: block;
+		content: '';
+		position: absolute;
+		background:url("../img/chain.png") no-repeat 50% 100%;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 142px;
+		bottom: 100%;
+		z-index: 1;
+	}
+}
+
+.form-jewelry-wrapper{
+	margin-right: 210px;
+}
+
+.form-jewelry{
+	background-color: $blue;
+	width: 80%;
+	margin:0 auto 20px;
+	padding:10px 20px;
+	position: relative;
+	border:3px solid rgba(255,255,255,0.6);
+	box-shadow: 0 0 0 6px $blue;
+	.form-jewelry-caption-wrap{
+		text-align: center;
+		margin-bottom: 16px;				
+	}
+	.form-jewelry-caption{
+		color: #fff;
+		font-weight: bold;
+		font-size: em(18px);
+		letter-spacing: em(1px);
+	}
+	input[type="text"]{
+		padding: 10px 10px 10px 18px;
+	}
+	.btn{
+		padding: 10px 0;
+	}
+}
+
+.main-header-right-wrap{
+	width: 90%;
+	margin:0 auto;
+	text-align: center;		
+}
+
+.tagline{
+	font-family: lobsterRegular, $verdana;
+	font-size: em(24px);
+	color: #6b6b6b;
+	margin-bottom: 60px;
+}
+
+.price-through{
+	color: #E14938;
+	text-decoration: line-through;	
+	font-size: em(24px);
+}
+
+.price-main{
+	font-size: em(45px);
+	color:#41A85F;
+	font-weight: bold;
+	margin-top:-16px;
+}
+
+@import "media.scss";

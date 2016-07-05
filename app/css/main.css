@@ -95,7 +95,9 @@ textarea {
   font-size: 0.875em;
   margin-bottom: 28px;
   border: 0;
-  color: #010101; }
+  color: #010101;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
   input[type="text"]::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
     color: #010101; }
@@ -149,67 +151,146 @@ textarea {
 
 /* =========== Header =========== */
 .main-header {
-  background: #fff;
+  background: url("../img/woman.png") #fff no-repeat 100% 0;
   width: 100%;
   position: relative; }
   .main-header .main-header-left {
     float: left;
     width: 50%;
     background: url("../img/aside.png") #000 no-repeat 100% 0; }
-    .main-header .main-header-left .img-jewelry-wrapper {
-      margin-right: 200px;
-      margin-bottom: 50px; }
-    .main-header .main-header-left .img-jewelry {
-      width: 40%;
-      margin: 100px auto 0;
-      position: relative; }
-      .main-header .main-header-left .img-jewelry img {
-        margin-top: -24px;
-        margin-left: 6px;
-        position: relative;
-        z-index: 2; }
-      .main-header .main-header-left .img-jewelry:before {
-        display: block;
-        content: '';
-        position: absolute;
-        background: url("../img/chain.png") no-repeat 50% 100%;
-        background-size: 100% 100%;
-        width: 100%;
-        height: 142px;
-        bottom: 100%;
-        z-index: 1; }
-    .main-header .main-header-left .form-jewelry-wrapper {
-      margin-right: 210px; }
-    .main-header .main-header-left .form-jewelry {
-      background-color: #287eb1;
-      width: 80%;
-      margin: 0 auto 20px;
-      padding: 10px 20px;
-      position: relative;
-      border: 3px solid rgba(255, 255, 255, 0.6);
-      -webkit-box-shadow: 0 0 0 6px #287eb1;
-              box-shadow: 0 0 0 6px #287eb1; }
-      .main-header .main-header-left .form-jewelry .form-jewelry-caption-wrap {
-        text-align: center;
-        margin-bottom: 16px; }
-      .main-header .main-header-left .form-jewelry .form-jewelry-caption {
-        color: #fff;
-        font-weight: bold;
-        font-size: 1.125em;
-        letter-spacing: 0.0625em; }
-      .main-header .main-header-left .form-jewelry input[type="text"] {
-        padding: 10px 10px 10px 18px; }
-      .main-header .main-header-left .form-jewelry .btn {
-        padding: 10px 0; }
   .main-header .main-header-right {
     float: left;
     width: 50%;
-    margin-top: 10%; }
-  .main-header .main-header-right-wrap {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-  .main-header .tagline {
-    font-family: lobsterRegular, "Verdana", "Geneva", sans-serif;
-    font-size: 1.5em;
-    color: #6b6b6b; }
+    margin-top: 8%; }
+
+.img-jewelry-wrapper {
+  margin-right: 200px;
+  margin-bottom: 50px; }
+
+.img-jewelry {
+  width: 40%;
+  margin: 100px auto 0;
+  position: relative; }
+  .img-jewelry img {
+    margin-top: -24px;
+    margin-left: 6px;
+    position: relative;
+    z-index: 2; }
+  .img-jewelry:before {
+    display: block;
+    content: '';
+    position: absolute;
+    background: url("../img/chain.png") no-repeat 50% 100%;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 142px;
+    bottom: 100%;
+    z-index: 1; }
+
+.form-jewelry-wrapper {
+  margin-right: 210px; }
+
+.form-jewelry {
+  background-color: #287eb1;
+  width: 80%;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  position: relative;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0 0 0 6px #287eb1;
+          box-shadow: 0 0 0 6px #287eb1; }
+  .form-jewelry .form-jewelry-caption-wrap {
+    text-align: center;
+    margin-bottom: 16px; }
+  .form-jewelry .form-jewelry-caption {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.125em;
+    letter-spacing: 0.0625em; }
+  .form-jewelry input[type="text"] {
+    padding: 10px 10px 10px 18px; }
+  .form-jewelry .btn {
+    padding: 10px 0; }
+
+.main-header-right-wrap {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+
+.tagline {
+  font-family: lobsterRegular, "Verdana", "Geneva", sans-serif;
+  font-size: 1.5em;
+  color: #6b6b6b;
+  margin-bottom: 60px; }
+
+.price-through {
+  color: #E14938;
+  text-decoration: line-through;
+  font-size: 1.5em; }
+
+.price-main {
+  font-size: 2.8125em;
+  color: #41A85F;
+  font-weight: bold;
+  margin-top: -16px; }
+
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .main-header .main-header-left,
+  .main-header .main-header-right {
+    float: none;
+    width: 100%; }
+  .main-header .main-header-left {
+    background: #000; }
+  .main-header .img-jewelry {
+    margin-top: 0; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /**/
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    /*CSS transitions*/
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/ }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/ }
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }
