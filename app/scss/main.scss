@@ -11,7 +11,8 @@
 	.main-header-left{
 		float:left;
 		width: 50%;
-		background:url("../img/aside.png") #000 no-repeat 100% 0;	
+		background:url("../img/aside.png") #000 no-repeat 100% 0;
+		background-size: auto 100%;
 	}
 	.main-header-right {
 		float:left;
@@ -50,6 +51,7 @@
 
 .form-jewelry-wrapper{
 	margin-right: 210px;
+	margin-bottom: 40px;
 }
 
 .form-jewelry{

@@ -2,23 +2,53 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px){
-	/**/
+	.main-header{
+		.main-header-right{
+			margin-top: 2%;
+		}
+	}
+	.price-main{
+		margin-bottom: 0;
+	}
 }
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
 	.main-header{
+		background-image: none;
 		.main-header-left,
 		.main-header-right{
 			float: none;
 			width: 100%;
 		}
 		.main-header-left{
-			background: #000;
+			background:#000 url("../img/aside_mobile.png") no-repeat 50% 100%;			
+			background-size: 100% 100%;
+			padding-bottom: 20px;
 		}
 		.img-jewelry{
 			margin-top: 0;
+		}
+	}
+	.img-jewelry{
+		width: 16%;
+		img{
+			margin-top: 0;
+		}
+	}
+	.img-jewelry-wrapper{
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+	.form-jewelry-wrapper{
+		&.desktop{
+			display: none;
+		}
+	}
+	.form-jewelry{
+		&.mobile{
+			display: block;
 		}
 	}
 }
@@ -55,8 +85,22 @@
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px){
-	/**/
+@media only screen and (max-width : 480px){	
+	.img-jewelry{
+		width: 20%;
+	}
+	h1{
+		font-size: em(30px);
+	}
+	.tagline{
+		font-size: em(18px);
+		margin-bottom: 40px;
+	}
+	.form-jewelry{ 
+		.form-jewelry-caption{
+			font-size: em(14px);
+		}
+	}
 }
 
 

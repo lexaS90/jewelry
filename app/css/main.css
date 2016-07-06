@@ -137,6 +137,9 @@ textarea {
     color: #fff;
     outline: none; }
 
+.mobile {
+  display: none; }
+
 @font-face {
   font-family: "CenturyGothicRegular";
   font-style: normal;
@@ -157,7 +160,8 @@ textarea {
   .main-header .main-header-left {
     float: left;
     width: 50%;
-    background: url("../img/aside.png") #000 no-repeat 100% 0; }
+    background: url("../img/aside.png") #000 no-repeat 100% 0;
+    background-size: auto 100%; }
   .main-header .main-header-right {
     float: left;
     width: 50%;
@@ -188,7 +192,8 @@ textarea {
     z-index: 1; }
 
 .form-jewelry-wrapper {
-  margin-right: 210px; }
+  margin-right: 210px;
+  margin-bottom: 40px; }
 
 .form-jewelry {
   background-color: #287eb1;
@@ -237,18 +242,36 @@ textarea {
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  /**/ }
+  .main-header .main-header-right {
+    margin-top: 2%; }
+  .price-main {
+    margin-bottom: 0; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  .main-header .main-header-left,
-  .main-header .main-header-right {
-    float: none;
-    width: 100%; }
-  .main-header .main-header-left {
-    background: #000; }
-  .main-header .img-jewelry {
-    margin-top: 0; } }
+  .main-header {
+    background-image: none; }
+    .main-header .main-header-left,
+    .main-header .main-header-right {
+      float: none;
+      width: 100%; }
+    .main-header .main-header-left {
+      background: #000 url("../img/aside_mobile.png") no-repeat 50% 100%;
+      background-size: 100% 100%;
+      padding-bottom: 20px; }
+    .main-header .img-jewelry {
+      margin-top: 0; }
+  .img-jewelry {
+    width: 16%; }
+    .img-jewelry img {
+      margin-top: 0; }
+  .img-jewelry-wrapper {
+    margin-right: 0;
+    margin-bottom: 0; }
+  .form-jewelry-wrapper.desktop {
+    display: none; }
+  .form-jewelry.mobile {
+    display: block; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -268,7 +291,15 @@ textarea {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  /**/ }
+  .img-jewelry {
+    width: 20%; }
+  h1 {
+    font-size: 1.875em; }
+  .tagline {
+    font-size: 1.125em;
+    margin-bottom: 40px; }
+  .form-jewelry .form-jewelry-caption {
+    font-size: 0.875em; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
