@@ -79,11 +79,33 @@ body {
   font-size: 16px;
   font-family: CenturyGothicRegular, "Verdana", "Geneva", sans-serif; }
 
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
 h1 {
   font-family: lobsterRegular, "Verdana", "Geneva", sans-serif;
   color: #010101;
   font-size: 3em;
   line-height: 1.25em; }
+
+h2 {
+  font-size: 2.625em;
+  color: #676767;
+  font-family: lobsterRegular, "Verdana", "Geneva", sans-serif;
+  text-align: center;
+  position: relative; }
+  h2:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #dd3176;
+    margin: 4px auto 0; }
+
+p {
+  color: #4d4d4d;
+  line-height: 1.5em; }
 
 input[type="text"],
 textarea {
@@ -121,7 +143,8 @@ textarea {
   font-weight: bold;
   letter-spacing: 0.1875em;
   font-size: 1em;
-  border: 0; }
+  border: 0;
+  cursor: pointer; }
 
 .main-btn {
   background-color: #dd3176;
@@ -139,6 +162,11 @@ textarea {
 
 .mobile {
   display: none; }
+
+.section {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 @font-face {
   font-family: "CenturyGothicRegular";
@@ -271,7 +299,11 @@ textarea {
   .form-jewelry-wrapper.desktop {
     display: none; }
   .form-jewelry.mobile {
-    display: block; } }
+    display: block; }
+  .price-main {
+    margin-bottom: 60px; }
+  .form-jewelry.mobile {
+    margin-bottom: 40px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {

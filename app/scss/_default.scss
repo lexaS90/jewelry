@@ -1,3 +1,5 @@
+@import "vars.scss";
+
 html {
     font-size: 1em;
     line-height: 1.4;
@@ -99,11 +101,37 @@ body{
     font-family: CenturyGothicRegular, $verdana;
 }
 
+.container{
+    width: 80%;
+    margin:0 auto;
+}
+
 h1{
   font-family: lobsterRegular, $verdana;
   color: $text-color;
   font-size: em(48px);
   line-height: em(20px);
+}
+
+h2{
+    font-size: em(42px);
+    color: tint($text-color, 40%);
+    font-family: lobsterRegular, $verdana;
+    text-align: center;
+    position: relative;
+    &:after{
+        content:"";
+        display: block;
+        width: 100px;
+        height: 3px;
+        background-color: $pink;
+        margin:4px auto 0;
+    }
+}
+
+p{    
+    color: tint($text-color, 30%);
+    line-height: em(24px);
 }
 
 input[type="text"],
@@ -132,6 +160,7 @@ textarea{
     letter-spacing: em(3px);
     font-size: em(16px);
     border:0;
+    cursor: pointer;
 }
 
 .main-btn{
@@ -152,4 +181,10 @@ textarea{
 
 .mobile{
     display: none;
+}
+
+.section{
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
