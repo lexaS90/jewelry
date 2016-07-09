@@ -81,7 +81,8 @@ body {
 
 .container {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 h1 {
   font-family: lobsterRegular, "Verdana", "Geneva", sans-serif;
@@ -144,7 +145,9 @@ textarea {
   letter-spacing: 0.1875em;
   font-size: 1em;
   border: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; }
 
 .main-btn {
   background-color: #dd3176;
@@ -167,6 +170,60 @@ textarea {
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px; }
+
+.player {
+  width: 380px;
+  border: 1px solid green;
+  position: relative;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #dd3176; }
+  .player .video-play {
+    display: block; }
+  .player .video-stop {
+    display: none;
+    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; }
+  .player.video-zoom {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3); }
+    .player.video-zoom .video-play {
+      display: none; }
+  .player:hover.video-zoom .video-stop {
+    display: block; }
+  .player .video {
+    width: 100%; }
+  .player .video-control {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    color: #dd3176;
+    margin: auto; }
+    .player .video-control .fa {
+      font-size: 4.375em;
+      line-height: 60px;
+      margin-top: -50%;
+      margin-left: -50%;
+      cursor: pointer;
+      opacity: 0.8;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      .player .video-control .fa:hover {
+        opacity: 1; }
+
+.player-left {
+  float: left; }
+
+.player-right {
+  float: right; }
+
+.btn-wrap {
+  width: 300px;
+  margin: 0 auto; }
 
 @font-face {
   font-family: "CenturyGothicRegular";
@@ -259,13 +316,36 @@ textarea {
 .price-through {
   color: #E14938;
   text-decoration: line-through;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  text-align: center; }
 
 .price-main {
   font-size: 2.8125em;
   color: #41A85F;
   font-weight: bold;
-  margin-top: -16px; }
+  margin-top: -16px;
+  text-align: center; }
+
+/* =========== S2 =========== */
+.s1 {
+  background: url("../img/s2_bg.jpg") no-repeat 0 50%;
+  background-size: cover;
+  position: relative; }
+  .s1:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8); }
+
+.s2-text-content {
+  margin-bottom: 60px; }
+
+.s2-video-content {
+  margin-bottom: 80px; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
@@ -303,11 +383,17 @@ textarea {
   .price-main {
     margin-bottom: 60px; }
   .form-jewelry.mobile {
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+  .player-left, .player-right {
+    float: none;
+    margin: 0 auto 30px; }
+  .player-right {
+    margin-bottom: 0; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /**/
+  h2 {
+    font-size: 1.75em; }
   /*Disable Animation on Mobile Devices*/
   .animated {
     /*CSS transitions*/
@@ -327,6 +413,15 @@ textarea {
     width: 20%; }
   h1 {
     font-size: 1.875em; }
+  h2 {
+    font-size: 1.25em; }
+  p {
+    font-size: 0.875em;
+    text-align: justify; }
+  .player {
+    width: 100%; }
+  .btn-wrap {
+    width: 100%; }
   .tagline {
     font-size: 1.125em;
     margin-bottom: 40px; }

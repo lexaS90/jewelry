@@ -59,12 +59,31 @@
 	<div class="container">
 		<h2>Заголовок второй секции</h2>
 		<div class="s2-content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati qui sunt, incidunt. Molestiae quae, illo, nostrum obcaecati reprehenderit sapiente nesciunt, perspiciatis libero iusto expedita error deleniti provident! Quibusdam expedita, perspiciatis, iure nihil vitae fugiat obcaecati culpa atque tempora molestiae hic ipsum animi! Aut quidem ipsa, temporibus. Aliquam velit quos, cum.</p>
-			<div class="player">
-				<video>
-					<source type="video/webm" src="./video/1/hv.webm">
-					<source type="video/mp4"  src="./video/1/hv.mp4">
-				</video>
+			<div class="s2-text-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati qui sunt, incidunt. Molestiae quae, illo, nostrum obcaecati reprehenderit sapiente nesciunt, perspiciatis libero iusto expedita error deleniti provident! Quibusdam expedita, perspiciatis, iure nihil vitae fugiat obcaecati culpa atque tempora molestiae hic ipsum animi! Aut quidem ipsa, temporibus. Aliquam velit quos, cum.</p>
+			</div>
+			<div class="s2-video-content clearfix">
+				<div class="player player-left">
+					<div class="video-control video-play"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+					<div class="video-control video-stop"><i class="fa fa-stop-circle-o" aria-hidden="true"></i></div>
+					<video loop="loop" class="video">						
+						<source src="./video/1/hv.ogv" type='video/ogg; codecs="theora, vorbis"'>
+						<source src="./video/1/hv.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						<source src="../../video/1/hv.webm" type='video/webm; codecs="vp8, vorbis"'>
+					</video>
+				</div>
+				<div class="player player player-right">
+					<div class="video-control video-play"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+					<div class="video-control video-stop"><i class="fa fa-stop-circle-o" aria-hidden="true"></i></div>
+					<video loop="loop" class="video">
+						<source src="./video/2/s2v.ogv" type='video/ogg; codecs="theora, vorbis"'>
+						<source src="./video/2/s2v.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						<source src="./video/2/s2v.webm" type='video/webm; codecs="vp8, vorbis"'>
+					</video>
+				</div>
+			</div>
+			<div class="btn-wrap">
+				<a href="#" class="btn main-btn">Заказать сейчас</a>		
 			</div>
 		</div>
 	</div>

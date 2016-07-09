@@ -97,6 +97,7 @@
 	color: #E14938;
 	text-decoration: line-through;	
 	font-size: em(24px);
+	text-align: center;
 }
 
 .price-main{
@@ -104,6 +105,33 @@
 	color:#41A85F;
 	font-weight: bold;
 	margin-top:-16px;
+	text-align: center;
+}
+
+/* =========== S2 =========== */
+.s1{
+	background:url("../img/s2_bg.jpg") no-repeat 0 50%;
+	background-size: cover;
+	position: relative;
+	&:before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: block;
+		background-color: rgba(255,255,255,0.8);
+
+	}
+}
+
+.s2-text-content{
+	margin-bottom: 60px;
+}
+
+.s2-video-content{
+	margin-bottom: 80px;
 }
 
 @import "media.scss";
