@@ -384,6 +384,22 @@
 	}
 }
 
+.main-footer{
+	background-color: $blue;
+	text-align: center;
+	color:#fff;
+	font-size: em(18px);
+	.copyright{		
+		font-weight: bold;
+	}
+	.develop{
+		a{			
+			color: shade($pink, 60%);
+		}
+	}
+}
+
+
 /* ====================== Media ====================== */
 
 @import "media.scss";

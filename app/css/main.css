@@ -573,6 +573,16 @@ textarea {
     height: 170px;
     resize: none; }
 
+.main-footer {
+  background-color: #287eb1;
+  text-align: center;
+  color: #fff;
+  font-size: 1.125em; }
+  .main-footer .copyright {
+    font-weight: bold; }
+  .main-footer .develop a {
+    color: #58142f; }
+
 /* ====================== Media ====================== */
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
