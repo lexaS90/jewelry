@@ -64,6 +64,42 @@
 	.player-right{
 		margin-bottom: 0;
 	}
+
+	.s2, .s2 .s2-wrap, .s2 .left-section, .s2 .right-section{
+		float: none;
+		position: static;
+		width: 100%;
+	}
+
+	.s2 .right-section, .s2 .s2-wrap{
+		background-color: #000;
+	}
+
+	.s2 .left-section{
+		background-color: #fff;
+	}
+
+	.s3-item{
+		width: 40%;
+		margin-bottom: 40px;
+	}
+
+	.s3 .s3-btn-section .btn-wrap{
+		width: 30%;
+	}
+
+	.s4 .contact-form{
+		width: 100%;
+	}
+
+	.s4 .contact-form .contact-form-top .form-item{
+		display: block;
+		width: 100%;
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
 
 
@@ -71,6 +107,22 @@
 @media only screen and (max-width : 768px){
 	h2{
 		font-size: em(28px);
+	}
+
+	.s3-item{
+		width: 100%;
+	}
+
+	.s3 .s3-btn-section{
+		background-image: none;
+		background-color: $blue;
+	}
+
+	.s3 .s3-btn-section .btn-wrap{
+		width: 60%;
+		&:before,&:after{
+			display: none;
+		}
 	}
 
 	
@@ -128,6 +180,10 @@
 		.form-jewelry-caption{
 			font-size: em(14px);
 		}
+	}
+	.s2 .character ul ul{
+		margin-left: 0;
+		padding-left: 4px;
 	}
 }
 
