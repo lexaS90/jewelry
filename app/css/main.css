@@ -3,6 +3,9 @@ html {
   font-size: 1em;
   line-height: 1.4; }
 
+html, body {
+  height: 100%; }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -577,11 +580,15 @@ textarea {
   background-color: #287eb1;
   text-align: center;
   color: #fff;
-  font-size: 1.125em; }
+  font-size: 1.125em;
+  padding: 30px; }
   .main-footer .copyright {
-    font-weight: bold; }
-  .main-footer .develop a {
-    color: #58142f; }
+    font-weight: bold;
+    margin-bottom: 2px; }
+  .main-footer .develop {
+    font-size: 0.875em; }
+    .main-footer .develop a {
+      color: #fff; }
 
 /* ====================== Media ====================== */
 /*==========  Desktop First Method  ==========*/

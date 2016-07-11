@@ -389,12 +389,15 @@
 	text-align: center;
 	color:#fff;
 	font-size: em(18px);
+	padding: 30px;
 	.copyright{		
 		font-weight: bold;
+		margin-bottom: 2px;
 	}
 	.develop{
+		font-size: 	em(14px);
 		a{			
-			color: shade($pink, 60%);
+			color: #fff;
 		}
 	}
 }
