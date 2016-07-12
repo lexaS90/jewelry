@@ -21,6 +21,42 @@ $(document ).ready(function(){
 
 	/* ====== End height element ====== */
 
+	/* ====== Mouse animation ====== */
+
+	function mousescroll(){
+    $('.scroll').animate({
+        'bottom':'10px'
+    }, 300, 'linear', function(){
+        $('.scroll').animate({
+            'bottom':'40px'
+        }, 300, 'linear');
+    });
+	}
+
+	setInterval(function(){
+    mousescroll();
+    setTimeout(mousescroll, 600);
+	}, 5000);
+
+	$("#scroll_header").click(function() {
+		$("html, body").animate({ scrollTop: $(".main-header").height()}, "slow");
+		return false;
+	});
+
+	/* ====== End mouse animation ====== */
+
+	/* ====== Scroll animation ====== */
+
+var waypoint = new Waypoint({
+	  element: $(".s1")[0],
+	  handler: function(direction) {
+	    alert("s1");
+  }
+});
+
+
+	/* ====== End scroll animation ====== */
+
 });
 
 $(window).resize(function(){

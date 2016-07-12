@@ -272,3 +272,23 @@ textarea{
     width: 300px;
     margin:0 auto;
 }
+
+.scroll {
+    // background: rgba(0, 0, 0, 0) url("../scroll.png") no-repeat scroll center center;
+    cursor: pointer;    
+    margin: auto;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    bottom:40px;
+    left:0;
+    right: 0;
+    right: 0;
+    // border:1px solid red;
+    background:url("../img/mouse.svg") no-repeat;
+    background-size: cover;
+    svg{
+        stroke: red;
+    }
+
+}

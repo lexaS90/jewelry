@@ -239,6 +239,21 @@ textarea {
   width: 300px;
   margin: 0 auto; }
 
+.scroll {
+  cursor: pointer;
+  margin: auto;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  right: 0;
+  background: url("../img/mouse.svg") no-repeat;
+  background-size: cover; }
+  .scroll svg {
+    stroke: red; }
+
 @font-face {
   font-family: "CenturyGothicRegular";
   font-style: normal;
