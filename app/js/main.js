@@ -47,12 +47,29 @@ $(document ).ready(function(){
 
 	/* ====== Scroll animation ====== */
 
-var waypoint = new Waypoint({
-	  element: $(".s1")[0],
-	  handler: function(direction) {
-	    alert("s1");
-  }
-});
+
+	$(".main-header-right").wAnimated("bounceInRight", "200");
+	$(".form-jewelry").wAnimated("zoomIn", "200");
+
+
+	$(".s1 .section-title").wAnimated("bounceInRight", "90%");
+	$(".s1 .s1-text-content").wAnimated("bounceInLeft", "90%");
+	$(".s1 .s1-video-content").wAnimated("fadeIn", "80%");
+
+	$(".s2 .section-title").wAnimated("bounceInLeft", "80%");
+	$(".character").wAnimated("bounceInLeft", "80%");
+	$(".img-size").wAnimated("fadeIn", "80%");
+	
+	$(".s3-item").each(function(index){
+		var item = this;
+		setInterval(function(){
+			/*item.wAnimated("fadeIn", "80%", function(th){
+				th.removeClass("off").addClass("on");
+			});*/
+			$(item).find(".s3-item-icon").removeClass("off").addClass("on");
+			// console.log(item.html);
+		},1000);		
+	});	
 
 
 	/* ====== End scroll animation ====== */
