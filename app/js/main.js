@@ -48,8 +48,8 @@ $(document ).ready(function(){
 	/* ====== Scroll animation ====== */
 
 
-	$(".main-header-right").wAnimated("bounceInRight", "200");
-	$(".form-jewelry").wAnimated("zoomIn", "200");
+	$(".main-header-right").wAnimated("bounceInRight", "90%");
+	$(".form-jewelry").wAnimated("zoomIn", "90%");
 
 
 	$(".s1 .section-title").wAnimated("bounceInRight", "90%");
@@ -61,14 +61,14 @@ $(document ).ready(function(){
 	$(".img-size").wAnimated("fadeIn", "80%");
 	
 	$(".s3-item").each(function(index){
-		var item = this;
-		setInterval(function(){
-			/*item.wAnimated("fadeIn", "80%", function(th){
+		var item = $(this);		
+		
+			item.wAnimated("fadeIn", "80%", index*400, function(th){
 				th.removeClass("off").addClass("on");
-			});*/
-			$(item).find(".s3-item-icon").removeClass("off").addClass("on");
-			// console.log(item.html);
-		},1000);		
+			});			
+			
+		
+
 	});	
 
 

@@ -521,9 +521,9 @@ textarea {
       width: 100%;
       height: 100%;
       border: 2px solid #dd3176;
-      -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg); }
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
     .s3-item .s3-item-icon.on:before {
       position: absolute;
       display: block;
@@ -533,13 +533,13 @@ textarea {
       width: 100%;
       height: 100%;
       border: 2px solid #dd3176;
-      -webkit-transition: -webkit-transform 1.2s ease-in-out;
-      transition: -webkit-transform 1.2s ease-in-out;
-      transition: transform 1.2s ease-in-out;
-      transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
-      -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-      transform: rotate(-90deg); }
+      -webkit-transition: -webkit-transform 0.4s ease-in-out;
+      transition: -webkit-transform 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+      -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      transform: rotate(135deg); }
     .s3-item .s3-item-icon .fa {
       font-size: 2.25em;
       line-height: 84px; }
