@@ -76,6 +76,11 @@ $(document ).ready(function(){
 
 
 	/* ====== End scroll animation ====== */
+$.jGrowl("Stick this!", {
+	sticky: true,
+	theme: "error",
+	header: "Ошибка ввода данных"
+});
 
 });
 

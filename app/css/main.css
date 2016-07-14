@@ -257,6 +257,9 @@ header, section {
   .scroll svg {
     stroke: red; }
 
+.jGrowl-notification.error {
+  background-color: #D14233; }
+
 @font-face {
   font-family: "CenturyGothicRegular";
   font-style: normal;

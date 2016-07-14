@@ -20,7 +20,8 @@
     "normalize-css": "^4.2.0",
     "jquery.maskedinput": "^1.4.1",
     "waypoints": "^4.0.0",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "jGrowl": "jgrowl#^1.4.5"
   },
   "overrides": {
     "font-awesome": {
@@ -31,6 +32,12 @@
     "waypoints": {
       "main": [
         "./lib/jquery.waypoints.js"
+      ]
+    },
+	 "jGrowl":{
+      "main": [
+        "./jquery.jgrowl.min.css",
+        "./jquery.jgrowl.min.js"
       ]
     }
   },
