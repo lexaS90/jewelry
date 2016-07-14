@@ -54,22 +54,25 @@ $(document ).ready(function(){
 
 	$(".s1 .section-title").wAnimated("bounceInRight", "90%");
 	$(".s1 .s1-text-content").wAnimated("bounceInLeft", "90%");
-	$(".s1 .s1-video-content").wAnimated("fadeIn", "80%");
+	$(".s1 .s1-video-content").wAnimated("fadeIn", "80%", "3s");
 
 	$(".s2 .section-title").wAnimated("bounceInLeft", "80%");
 	$(".character").wAnimated("bounceInLeft", "80%");
-	$(".img-size").wAnimated("fadeIn", "80%");
+	$(".img-size").wAnimated("fadeIn", "80%", "5s");
 	
+	$(".s3 .section-title").wAnimated("bounceInRight", "80%");
 	$(".s3-item").each(function(index){
 		var item = $(this);		
 		
-			item.wAnimated("fadeIn", "80%", index*400, function(th){
-				th.removeClass("off").addClass("on");
-			});			
-			
-		
-
+			item.wAnimated("fadeIn", "80%", "1s", 300*index+"ms", function(th){
+				setTimeout(function(){
+					th.find(".s3-item-icon").removeClass("off").addClass("on");
+				},300*index);				
+			});
 	});	
+
+	$(".s4 .section-title").wAnimated("bounceInLeft", "80%");
+	$(".s4 .contact-form").wAnimated("zoomIn", "80%");
 
 
 	/* ====== End scroll animation ====== */

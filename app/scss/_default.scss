@@ -201,6 +201,10 @@ textarea{
     display: none;
 }
 
+header,section{
+    overflow: hidden;
+}
+
 .section{
     position: relative;
     padding-top: 40px;
