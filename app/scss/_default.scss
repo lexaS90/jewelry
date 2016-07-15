@@ -140,6 +140,11 @@ p{
     line-height: em(24px);
 }
 
+form .error{
+   border:2px solid #fa565c !important;
+       
+}
+
 input[type="text"],
 textarea{
     width: 100%;
@@ -295,6 +300,37 @@ header,section{
         stroke: red;
     }
 
+}
+
+.jGrowl{
+    font-size: em(16px);
+    font-family: CenturyGothicRegular, $verdana;
+
+    .jGrowl-header{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .jGrowl-message{
+        font-size: em(12px);
+    }
+    .jGrowl-notification{
+        position: relative;
+        padding-bottom: 14px;
+        padding-left: 14px;
+        &:before{
+            position: absolute;
+            content:"";
+            border:2px solid #fff;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border-radius: 5px;
+        }
+    }
+    .jGrowl-close{
+       position: relative;
+    }
 }
 
 .jGrowl-notification.error{

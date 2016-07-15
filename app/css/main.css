@@ -113,6 +113,9 @@ p {
   color: #4d4d4d;
   line-height: 1.5em; }
 
+form .error {
+  border: 2px solid #fa565c !important; }
+
 input[type="text"],
 textarea {
   width: 100%;
@@ -256,6 +259,31 @@ header, section {
   background-size: cover; }
   .scroll svg {
     stroke: red; }
+
+.jGrowl {
+  font-size: 1em;
+  font-family: CenturyGothicRegular, "Verdana", "Geneva", sans-serif; }
+  .jGrowl .jGrowl-header {
+    text-align: center;
+    margin-bottom: 10px; }
+  .jGrowl .jGrowl-message {
+    font-size: 0.75em; }
+  .jGrowl .jGrowl-notification {
+    position: relative;
+    padding-bottom: 14px;
+    padding-left: 14px; }
+    .jGrowl .jGrowl-notification:before {
+      position: absolute;
+      content: "";
+      border: 2px solid #fff;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      -webkit-border-radius: 5px;
+              border-radius: 5px; }
+  .jGrowl .jGrowl-close {
+    position: relative; }
 
 .jGrowl-notification.error {
   background-color: #D14233; }

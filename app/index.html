@@ -35,7 +35,7 @@
         <div class="form-jewelry-wrapper desktop">
           <div class="form-jewelry">
             <div class="form-jewelry-caption-wrap"> <span class="form-jewelry-caption">Оставте вашы данные, и мы вам перезвоним</span> </div>
-            <form action="#">
+            <form action="#" id="callBackForm">
               <div class="form-item"> <input type="text" placeholder="Ваше имя" name="name"> </div>
               <div class="form-item"> <input type="text" placeholder="Ваш телефон" name="phone" class="phone"> </div> <input class="btn main-btn" type="submit" name="header-form-submit" value="Отправить"> </form>
           </div>
@@ -207,6 +207,7 @@
     <script src="/vendor/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
     <script src="/vendor/waypoints/lib/jquery.waypoints.js"></script>
     <script src="/vendor/jGrowl/jquery.jgrowl.min.js"></script>
+    <script src="/vendor/jquery-validation/dist/jquery.validate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/main.min.js -->
@@ -221,7 +222,7 @@
       
       #hellopreloader_preload {
         display: block;
-        /*display: none;*/
+        display: none;
         position: fixed;
         z-index: 99999;
         top: 0;

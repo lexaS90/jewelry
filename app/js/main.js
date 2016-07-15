@@ -76,13 +76,50 @@ $(document ).ready(function(){
 
 
 	/* ====== End scroll animation ====== */
-$.jGrowl("Stick this!", {
-	sticky: true,
-	theme: "error",
-	header: "Ошибка ввода данных"
-});
+
+	/* ====== Form Validate ====== */
+	
+	$("#callBackForm").validate({
+	  rules: {	    
+	    name: {
+    		required: true,
+	    },
+	    
+	    phone: {
+	      required: true,
+	    },
+	  },
+    messages: {
+	    name: "<div>Поле \"<strong>Ваше имя</strong>\" не запонено</div>",
+	    phone: {
+	      required: "<div>Поле '<strong>Телефон</strong>' не запонено</div>",	      
+	    }
+	  },
+    showErrors: function(errorMap, errorList) {	    
+	    var errorRes = "";
+	    for(var error in errorList)
+    		errorRes = errorRes + errorList[error].message;
+	    
+	    $.jGrowl(errorRes, {	
+				theme: "error",
+				header: "Ошибка ввода данных",
+				position: "top-left"
+			});
+    	
+
+	    this.defaultShowErrors();
+	  },
+
+	  errorPlacement: function(error, element) {},
+	  onfocusout: false,
+	  onkeyup: false
+	});
+
+	/* ====== End form Validate ====== */
+
 
 });
+
 
 $(window).resize(function(){
 	headerH();

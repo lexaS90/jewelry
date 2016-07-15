@@ -30,7 +30,7 @@
 		var waypoint = new Waypoint({
 			element: $(th)[0],
 
-			handler: function(direction) {console.log("ok");
+			handler: function(direction) {
 				if (fun)
 					fun($(th));
 				if (effect)
