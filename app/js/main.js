@@ -1,6 +1,6 @@
 $(document ).ready(function(){
 	$(".phone").mask("(999) 999-9999");
-  	
+
 	/* ====== Video ====== */
 
 	$(".player").click(function(){		
@@ -24,18 +24,18 @@ $(document ).ready(function(){
 	/* ====== Mouse animation ====== */
 
 	function mousescroll(){
-    $('.scroll').animate({
-        'bottom':'10px'
-    }, 300, 'linear', function(){
-        $('.scroll').animate({
-            'bottom':'40px'
-        }, 300, 'linear');
-    });
+		$('.scroll').animate({
+			'bottom':'10px'
+		}, 300, 'linear', function(){
+			$('.scroll').animate({
+				'bottom':'40px'
+			}, 300, 'linear');
+		});
 	}
 
 	setInterval(function(){
-    mousescroll();
-    setTimeout(mousescroll, 600);
+		mousescroll();
+		setTimeout(mousescroll, 600);
 	}, 5000);
 
 	$("#scroll_header").click(function() {
@@ -64,11 +64,11 @@ $(document ).ready(function(){
 	$(".s3-item").each(function(index){
 		var item = $(this);		
 		
-			item.wAnimated("fadeIn", "80%", "1s", 300*index+"ms", function(th){
-				setTimeout(function(){
-					th.find(".s3-item-icon").removeClass("off").addClass("on");
-				},300*index);				
-			});
+		item.wAnimated("fadeIn", "80%", "1s", 400*index+"ms", function(th){
+			setTimeout(function(){
+				th.find(".s3-item-icon").removeClass("off").addClass("on");
+			},400*index);				
+		});
 	});	
 
 	$(".s4 .section-title").wAnimated("bounceInLeft", "80%");
@@ -78,44 +78,106 @@ $(document ).ready(function(){
 	/* ====== End scroll animation ====== */
 
 	/* ====== Form Validate ====== */
-	
-	$("#callBackForm").validate({
-	  rules: {	    
-	    name: {
-    		required: true,
-	    },
-	    
-	    phone: {
-	      required: true,
-	    },
-	  },
-    messages: {
-	    name: "<div>Поле \"<strong>Ваше имя</strong>\" не запонено</div>",
-	    phone: {
-	      required: "<div>Поле '<strong>Телефон</strong>' не запонено</div>",	      
-	    }
-	  },
-    showErrors: function(errorMap, errorList) {	    
-	    var errorRes = "";
-	    for(var error in errorList)
-    		errorRes = errorRes + errorList[error].message;
-	    
-	    $.jGrowl(errorRes, {	
-				theme: "error",
-				header: "Ошибка ввода данных",
-				position: "top-left"
-			});
-    	
 
-	    this.defaultShowErrors();
-	  },
+	$.fn.jValidate = function(rules, messages){
+		messages = (typeof(messages)=="object") ? messages : {};		
 
-	  errorPlacement: function(error, element) {},
-	  onfocusout: false,
-	  onkeyup: false
-	});
+		$(this).validate({
+			rules:rules,
+			messages:messages,
+			showErrors: function(errorMap, errorList) {	    
+				var errorRes = "";
+				for(var error in errorList)
+					errorRes = errorRes + errorList[error].message;
+
+				$.jGrowl(errorRes, {	
+					theme: "error",
+					header: "Ошибка ввода данных",
+					position: "top-left"
+				});
+
+
+				this.defaultShowErrors();
+			},
+
+			errorPlacement: function(error, element) {},
+			onfocusout: false,
+			onkeyup: false
+		});
+	}
+
+
+
+	$("#callBackForm").jValidate(
+	{
+		name: {
+			required: true,
+		},
+		phone: {
+			required: true,
+		},
+	},
+	{
+		name: "<div>Поле <strong>Ваше имя</strong> заполнено с ошибкой</div>",
+		phone: "<div>Поле <strong>Телефон</strong> заполнено с ошибкой</div>",	      
+	}
+	);
+
+	$("#contactForm").jValidate(
+	{
+		name:{
+			required: true,
+		},
+		email:{
+			required: true,
+			email:true,
+		},
+		phone:{
+			required: true,
+		}
+	},
+	{
+		name: "<div>Поле <strong>Ваше имя</strong> заполнено с ошибкой</div>",
+		email: "<div>Поле <strong>Email</strong> заполнено с ошибкой</div>",	      
+		phone: "<div>Поле <strong>Телефон</strong> заполнено с ошибкой</div>",	      
+		
+	}
+
+	);
+
+	$("#orderForm").jValidate(
+	{
+		name:{
+			required: true,
+		},
+		phone:{
+			required: true,
+		}
+	},
+	{
+		name: "<div>Поле <strong>Ваше имя</strong> заполнено с ошибкой</div>",	      
+		phone: "<div>Поле <strong>Телефон</strong> заполнено с ошибкой</div>",	      
+		
+	}
+
+	);	
 
 	/* ====== End form Validate ====== */
+
+
+	/* ====== Popup ====== */
+
+
+	$('.popup-btn').magnificPopup({
+		callbacks: {
+			open: function() {
+				$(".popup").addClass("animated bounceInLeft");
+			}
+		}
+	});
+
+
+	/* ====== End popup ====== */
 
 
 });

@@ -301,7 +301,7 @@
 				width: 100%;
 				height: 100%;
 				border:2px solid $pink;
-				@include transform(rotate(45deg));				
+				@include transform(rotate(-135deg));				
 			}
 		}
 		&.on{
@@ -314,7 +314,7 @@
 				width: 100%;
 				height: 100%;
 				border:2px solid $pink;
-				@include transition(transform 300ms ease-in-out);				
+				@include transition(transform 400ms ease-in-out);				
 				@include transform(rotate(135deg));
 			}
 		}

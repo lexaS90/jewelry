@@ -95,6 +95,10 @@ textarea {
     }
 }
 
+.hidden{
+    display: none;
+}
+
 img{
     max-width: 100%;
 }
@@ -336,4 +340,49 @@ header,section{
 .jGrowl-notification.error{
     background-color: #D14233;
 }
+.jGrowl-notification.success{
+    background-color: #1abc9c;
+}
+.jGrowl-notification.warning{
+    background-color: #fba026;
+}
 
+.mfp-close-btn-in .mfp-close{
+    color: #fff;
+}
+.popup{
+    position: relative;
+    background-color: $blue;
+    margin:0 auto;
+    max-width: 50%;
+    padding:10px 20px;
+    border:3px solid rgba(255,255,255,0.6);
+    box-shadow: 0 0 0 6px $blue;
+    .popup-content{        
+        width: 80%;
+        margin:0 auto;
+        h2{
+            text-align: center;
+        }
+        input,textarea{
+            width: 100%;
+        }
+        input[type="checkbox"],input[type="radio"]{
+            width: auto;
+        }
+        .custom-btn{
+            margin-top: 30px;
+        }
+    }
+    .order-popup-title{
+        color: #fff;
+        font-weight: bold;
+        font-size: em(18px);
+        letter-spacing: em(1px);
+        text-align: center;
+        margin-bottom: 30px;
+    }    
+    .btn{
+        margin-top: 6px;
+    }
+}
