@@ -764,7 +764,9 @@ header, section {
     width: 100%;
     margin-bottom: 30px; }
     .s4 .contact-form .contact-form-top .form-item:last-child {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+  #scroll_header {
+    display: none; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
