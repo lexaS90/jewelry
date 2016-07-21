@@ -143,8 +143,7 @@ gulp.task('watch', function(){
  */
 
  gulp.task('fonts', function (){
- 	gulp.src('app/fonts/*')
- 	.pipe(filter(['*.eot', '*.svg', '*.ttf', '*.woff', '*.woff2']))
+ 	gulp.src('app/fonts/**/*')
  	.pipe(gulp.dest('dist/fonts/'));
  	});
 
@@ -181,10 +180,15 @@ gulp.task('watch', function(){
  		])
  	.pipe(gulp.dest('dist/css/'))
 
- 	 	gulp.src([
+	gulp.src([
  		'app/js/main.js'
  		])
  	.pipe(gulp.dest('dist/js/'))
+	
+	gulp.src([
+ 		'app/video/**/*'
+ 		])
+ 	.pipe(gulp.dest('dist/video/'))
  	});
 
 

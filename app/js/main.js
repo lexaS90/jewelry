@@ -134,12 +134,16 @@ $(document ).ready(function(){
 		},
 		phone:{
 			required: true,
+		},
+		message:{
+			required: true,
 		}
 	},
 	{
 		name: "<div>Поле <strong>Ваше имя</strong> заполнено с ошибкой</div>",
 		email: "<div>Поле <strong>Email</strong> заполнено с ошибкой</div>",	      
 		phone: "<div>Поле <strong>Телефон</strong> заполнено с ошибкой</div>",	      
+		message: "<div>Поле <strong>Сообщение</strong> заполнено с ошибкой</div>",	      
 		
 	}
 
@@ -178,6 +182,14 @@ $(document ).ready(function(){
 
 
 	/* ====== End popup ====== */
+
+	/* ====== Cross-browser ====== */
+
+if (!Modernizr.input.placeholder)
+		$('input, textarea').placeholder();
+
+
+	/* ====== End cross-browser ====== */
 
 
 });

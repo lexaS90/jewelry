@@ -23,7 +23,9 @@
     "animate.css": "^3.5.2",
     "jGrowl": "jgrowl#^1.4.5",
     "jquery-validation": "^1.15.0",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "modernizr": "v2.8.3",
+    "jquery-placeholder": "^2.3.1"
   },
   "overrides": {
     "font-awesome": {
@@ -41,6 +43,9 @@
         "./jquery.jgrowl.min.css",
         "./jquery.jgrowl.min.js"
       ]
+    },
+    "modernizr": {
+      "main": []
     }
   },
   "devDependencies": {}

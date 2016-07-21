@@ -4,9 +4,15 @@
 		<!-- @@include ../include/head.html-->
 	</head>
 	<body>
-		<!--[if lt IE 8]>
-			<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста,<a href="http://browsehappy.com/">обновите ваш браузер</a></p>
+	<!--[if lt IE 9]>
+			<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, обновите ваш браузер</a></p>
 		<![endif]-->
+		<!--[if lt IE 9]>
+	<script src="js/html5shiv/es5-shim.min.js"></script>
+	<script src="js/html5shiv/html5shiv.min.js"></script>
+	<script src="js/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="js/respond/respond.min.js"></script>
+	<![endif]-->
 		<!-- Preloader -->
 	<style type="text/css">
 		#hellopreloader>p{
@@ -14,7 +20,6 @@
 		}
 		#hellopreloader_preload{
 			display: block;
-			/*display: none;*/
 			position: fixed;
 			z-index: 99999;
 			top: 0;
