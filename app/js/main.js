@@ -196,7 +196,7 @@ if (!Modernizr.input.placeholder)
 
 
 $(window).resize(function(){
-	headerH();
+	headerH("r");
 
 });
 
@@ -204,7 +204,7 @@ $(window).scroll(function(){
 
 });
 
-function headerH(){
+function headerH(t){
 	function get_bottom_coordinate(ob){
 		var $el = ob; 
 		return $el.offset().top + $el.outerHeight(true);
@@ -223,6 +223,6 @@ function headerH(){
 
 	var form_w = $(".form-jewelry-wrapper").height();
 
-	var form_top_margin = (bottom - top - form_w) / 2;console.log(form_top_margin);
-	$(".form-jewelry-wrapper").css("margin-top", form_top_margin);
+	var form_top_margin = (bottom - top - form_w) / 2;
+	// $(".form-jewelry-wrapper").css("margin-top", form_top_margin);
 }
