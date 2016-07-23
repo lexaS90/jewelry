@@ -477,7 +477,10 @@ header, section {
     float: left;
     width: 50%;
     position: relative;
-    left: 50%; }
+    left: 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 60px; }
   .s2 .character ul {
     list-style-type: none;
     margin-left: 80px; }
