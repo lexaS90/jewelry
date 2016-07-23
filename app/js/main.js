@@ -85,16 +85,18 @@ $(document ).ready(function(){
 		$(this).validate({
 			rules:rules,
 			messages:messages,
-			showErrors: function(errorMap, errorList) {	    
+			showErrors: function(errorMap, errorList) {
 				var errorRes = "";
 				for(var error in errorList)
 					errorRes = errorRes + errorList[error].message;
 
-				$.jGrowl(errorRes, {	
-					theme: "error",
-					header: "Ошибка ввода данных",
-					position: "top-left"
-				});
+				if ('' !== errorRes){  
+					$.jGrowl(errorRes, {	
+						theme: "error",
+						header: "Ошибка ввода данных",
+						position: "top-left"
+					});
+				}
 
 
 				this.defaultShowErrors();
