@@ -212,7 +212,7 @@ function headerH(){
 	
 	if ($("html").width() > 992){
 		var html_h = $("html").height();
-		$(".main-header-left").height(html_h);
+		$(".main-header-left").css('min-height',html_h);
 	}
 	else{
 		$(".main-header-left").height("auto");
@@ -223,6 +223,6 @@ function headerH(){
 
 	var form_w = $(".form-jewelry-wrapper").height();
 
-	var form_top_margin = (bottom - top - form_w) / 2;
+	var form_top_margin = (bottom - top - form_w) / 2;console.log(form_top_margin);
 	$(".form-jewelry-wrapper").css("margin-top", form_top_margin);
 }
