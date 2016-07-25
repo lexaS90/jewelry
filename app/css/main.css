@@ -390,7 +390,6 @@ header, section {
   width: 80%;
   margin: 0 auto 20px;
   padding: 10px 20px;
-  position: relative;
   border: 3px solid rgba(255, 255, 255, 0.6);
   -webkit-box-shadow: 0 0 0 6px #287eb1;
           box-shadow: 0 0 0 6px #287eb1; }
@@ -723,7 +722,7 @@ header, section {
       width: 100%; }
     .main-header .main-header-left {
       background: #000 url("../img/aside_mobile.png") no-repeat 50% 100%;
-      background-size: 100% 100%;
+      background-size: 100% auto;
       padding-bottom: 20px; }
     .main-header .img-jewelry {
       margin-top: 0; }

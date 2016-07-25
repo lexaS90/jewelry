@@ -217,7 +217,7 @@ function headerH(t){
 		$(".main-header-left").css('min-height',html_h);
 	}
 	else{
-		$(".main-header-left").height("auto");
+		$(".main-header-left").css('min-height',"0");
 	}
 
 	var top = get_bottom_coordinate($(".img-jewelry-wrapper"));
@@ -226,5 +226,5 @@ function headerH(t){
 	var form_w = $(".form-jewelry-wrapper").height();
 
 	var form_top_margin = (bottom - top - form_w) / 2;
-	// $(".form-jewelry-wrapper").css("margin-top", form_top_margin);
+	$(".form-jewelry-wrapper").css("margin-top", form_top_margin);
 }
