@@ -16,7 +16,7 @@ $(document ).ready(function(){
 
 	/* ====== Height element ====== */
 
-	headerH();
+	// headerH();
 	
 
 	/* ====== End height element ====== */
@@ -206,6 +206,11 @@ $(window).scroll(function(){
 
 });
 
+$(window).load(function(){
+	headerH("r");
+
+});
+
 function headerH(t){
 	function get_bottom_coordinate(ob){
 		var $el = ob; 
@@ -225,6 +230,6 @@ function headerH(t){
 
 	var form_w = $(".form-jewelry-wrapper").height();
 
-	var form_top_margin = (bottom - top - form_w) / 2;
+	var form_top_margin = (bottom - top - form_w) / 2;console.log(top);
 	$(".form-jewelry-wrapper").css("margin-top", form_top_margin);
 }
